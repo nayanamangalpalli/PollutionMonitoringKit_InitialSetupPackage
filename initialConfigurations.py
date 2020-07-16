@@ -56,7 +56,10 @@ rows = list(results)		#GOOGLE_CLOUD
 if len(items) == 0 and len(rows)== 0 :
 	print("Please issue a previously unused Device ID (D_ID) first to activate the device from our website www.-----.com")
 elif len(items) == 1 and len(rows)== 1 :
-	config.D_ID = D_ID
+	open('config.py', 'w').close()
+	ob = open('config.py', 'w')
+	ob.write("D_ID = "+D_ID)
+	ob.close()
 	address = input("Please enter accurate address of where the kit will be placed : ")
 	geocode_result = gmaps.geocode(address)
 
