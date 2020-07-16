@@ -6,7 +6,7 @@ from datetime import datetime
 
 from azure.cosmos import exceptions, CosmosClient, PartitionKey
 import json
-from config import D_ID
+import config
 
 
 gmaps = googlemaps.Client(key='AIzaSyAhi518dsLAktyY8d1BG9gnugORBBfdEMg')
@@ -56,6 +56,7 @@ rows = list(results)		#GOOGLE_CLOUD
 if len(items) == 0 and len(rows)== 0 :
 	print("Please issue a previously unused Device ID (D_ID) first to activate the device from our website www.-----.com")
 elif len(items) == 1 and len(rows)== 1 :
+	config.D_ID = D_ID
 	address = input("Please enter accurate address of where the kit will be placed : ")
 	geocode_result = gmaps.geocode(address)
 
