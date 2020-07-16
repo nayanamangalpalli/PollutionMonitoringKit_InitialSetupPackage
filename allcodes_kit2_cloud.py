@@ -29,6 +29,7 @@ import os
 import math
 import smbus
 import time
+import config
 import serial, struct, sys, json
 from ctypes import c_short
 from ctypes import c_byte
@@ -239,7 +240,7 @@ def all_codes():
  with serial.Serial(PORT, 9600, bytesize=8, parity='N', stopbits=1) as ser:
     while True:
         temperature,pressure,humidity = readBME280All()
-        msg = '"D_ID":{},"TS":"{}","TMP":{},"P":{},"H":{},'.format(2,time.strftime("%Y-%m-%d %H:%M:%S"),round(temperature,3),round(pressure,3),round(humidity,3))
+        msg = '"D_ID":{},"TS":"{}","TMP":{},"P":{},"H":{},'.format(config.D_ID,time.strftime("%Y-%m-%d %H:%M:%S"),round(temperature,3),round(pressure,3),round(humidity,3))
         
 
         data = ser.read(10)
