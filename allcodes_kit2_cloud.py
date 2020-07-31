@@ -1,13 +1,5 @@
 #!/usr/bin/python3
 # coding=utf-8
-# "DATASHEET": http://cl.ly/ekot
-# https://gist.github.com/kadamski/92653913a53baf9dd1a8
-#--------------------------------------
-#    ___  ___  _ ____
-#   / _ \/ _ \(_) __/__  __ __
-#  / , _/ ___/ /\ \/ _ \/ // /
-# /_/|_/_/  /_/___/ .__/\_, /
-#                /_/   /___/
 #
 #           bme280.py
 #  Read data from a digital pressure sensor.
