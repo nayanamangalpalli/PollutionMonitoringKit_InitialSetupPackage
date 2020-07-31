@@ -14,12 +14,6 @@
 #
 #  Official datasheet available from :
 #  https://www.bosch-sensortec.com/bst/products/all_products/bme280
-#
-# Author : Matt Hawkins
-# Date   : 21/01/2018
-#
-# https://www.raspberrypi-spy.co.uk/
-#
 #---------------------------------------
 from __future__ import print_function
 from mq import *
